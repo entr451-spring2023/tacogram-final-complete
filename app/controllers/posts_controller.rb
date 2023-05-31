@@ -5,7 +5,9 @@ class PostsController < ApplicationController
     # alternative responses to requests other than HTML
     respond_to do |format|
       format.html # implicitly renders posts/index.html.erb
-      format.json { render :json => @posts }
+      format.json do
+        render :json => @posts
+      end
     end
   end
 
